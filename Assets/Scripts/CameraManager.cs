@@ -11,16 +11,16 @@ public class CameraManager : MonoBehaviour
 
     void Start()
     {
-        camera = this.GetComponent<Camera>();
+        camera = GetComponent<Camera>();
         size = camera.orthographicSize;
 
     }
 
     void Update()
     {
-        float blocksTop = gameManager.GetBlocksTop() + 3.0f;
+        float blocksTop = gameManager.GetBlocksTop() + 7.0f;
         size = Mathf.Max(size, blocksTop / 2.0f);
         camera.orthographicSize = size;
-        camera.transform.position = new Vector3(0, size - 1.0f, -10);
+        camera.transform.position = new Vector3(0, size - 3.0f, -10);
     }
 }

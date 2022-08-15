@@ -5,9 +5,23 @@ public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
 
+    private GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = GetComponent<GameManager>();
+    }
+
     void Update()
     {
-        int length = GameObject.FindGameObjectsWithTag("Block").Length;
-        scoreText.text = "Score: " + length;
+        scoreText.text = "スコア: " + getScore();
+    }
+
+    public int getScore()
+    {
+        int score = GameObject.FindGameObjectsWithTag("Block").Length;
+        if (gameManager.currentBlock != null)
+            score--;
+        return score;
     }
 }

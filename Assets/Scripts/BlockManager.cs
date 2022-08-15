@@ -6,9 +6,9 @@ public class BlockManager : MonoBehaviour
 {
     void Update()
     {
-        if (this.transform.position.y < -4)
+        if (transform.position.y < -4)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }
