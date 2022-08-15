@@ -8,6 +8,14 @@ public class RightButton : MonoBehaviour,
 {
     public GameManager gameManager;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            gameManager.MoveCurrentBlockRight();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         gameManager.MoveCurrentBlockRight();

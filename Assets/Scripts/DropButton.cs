@@ -8,6 +8,14 @@ public class DropButton : MonoBehaviour,
 {
     public GameManager gameManager;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            gameManager.DropCurrentBlock();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         gameManager.DropCurrentBlock();

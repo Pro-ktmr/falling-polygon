@@ -149,7 +149,7 @@ public class BlockGenerator : MonoBehaviour
         mesh.SetUVs(0, uv);
 
         GameObject obj = new GameObject("Block");
-        obj.transform.position = new Vector3(0, 10, 0);
+        obj.transform.position = new Vector3(100000, 0, 0);
         obj.AddComponent<MeshFilter>();
         obj.AddComponent<MeshRenderer>();
         obj.AddComponent<PolygonCollider2D>();
@@ -197,7 +197,7 @@ public class BlockGenerator : MonoBehaviour
         mesh.SetUVs(0, uv);
 
         GameObject obj = new GameObject("Block");
-        obj.transform.position = new Vector3(0, 10, 0);
+        obj.transform.position = new Vector3(100000, 0, 0);
         obj.AddComponent<MeshFilter>();
         obj.AddComponent<MeshRenderer>();
         obj.AddComponent<PolygonCollider2D>();

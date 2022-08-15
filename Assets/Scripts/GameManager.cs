@@ -28,7 +28,19 @@ public class GameManager : MonoBehaviour
     {
         currentBlock = blockGenerator.GenerateBlock();
         currentBlockX = 0;
+        currentBlockY = GetBlocksTop() + 5.0f;
         currentBlock.transform.position = new Vector3(currentBlockX, currentBlockY, 0);
+    }
+
+    public float GetBlocksTop()
+    {
+        GameObject[] blocks = GameObject.FindGameObjectsWithTag("Block");
+        float blocksTop = 3.0f;
+        foreach (GameObject block in blocks)
+        {
+            blocksTop = Mathf.Max(blocksTop, block.transform.position.y);
+        }
+        return blocksTop;
     }
 
     public void DropCurrentBlock()
